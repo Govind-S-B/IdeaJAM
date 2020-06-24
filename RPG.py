@@ -56,3 +56,4 @@ while hp > 0:
     print('Enemy health:', enemy_hp)
 
 print('Oh! You died lol. But you killed:', kill_count, 'peeple tho')
+input('press enter to close game')
