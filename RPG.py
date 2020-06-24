@@ -22,7 +22,7 @@ def fight():
     dmg = random.randint(2, 5)
     enemy_hp -= random.randint(2, 5)
     log['damage dealt'] = dmg
-    print('Damage dealt:',dmg)
+    print('Damage dealt:', dmg)
     if enemy_hp <= 0:
         print('Enemy died')
         create_new_enemy()
@@ -36,12 +36,14 @@ def heal():
     if hp > 100:
         hp = 100
 
+
 def enemy_attack():
     global hp
     dmg = random.randint(15, 35)
     hp -= dmg
     log['damage taken'] = dmg
-    print('Damage taken:',dmg)
+    print('Damage taken:', dmg)
+
 
 while hp > 0:
     player_option = input('Whatchu gon do?')
@@ -50,8 +52,7 @@ while hp > 0:
     if player_option == '2':
         heal()
     enemy_attack()
-    def turn_end():
-        print('Health:',hp)
-        print('Enemy health:',enemy_hp)
+    print('Health:', hp)
+    print('Enemy health:', enemy_hp)
 
-print('Oh! You died lol. But you killed:',kill_count,'peeple tho')
+print('Oh! You died lol. But you killed:', kill_count, 'peeple tho')
